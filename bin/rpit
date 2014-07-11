@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+  .version(require('../package.json').version)
+  .usage('<name>')
+  .parse(process.argv)
+
+var path = require('path')
+var fs = require('fs')
+
+var name = program.args[0]
+if (!name) throw new Error('no name defined')
+
+fs.mkdirSync(name)
+
+var assets = path.join(__dirname, '..', 'assets')
+fs.writeFileSync(path.join(name, '.gitignore'), fs.readFileSync(path.join(assets, '.gitignore')))
+fs.writeFileSync(path.join(name, 'LICENSE'), fs.readFileSync(path.join(assets, 'LICENSE')))
+fs.writeFileSync(path.join(name, 'README.md'), fs.readFileSync(path.join(assets, 'README.md')))
+
+var package = require('../assets/package.json')
+package.name = name
+fs.writeFileSync(path.join(name, 'package.json'), JSON.stringify(package, null, 2))
