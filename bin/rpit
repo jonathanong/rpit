@@ -14,7 +14,7 @@ if (!name) throw new Error('no name defined')
 fs.mkdirSync(name)
 
 var assets = path.join(__dirname, '..', 'assets')
-fs.writeFileSync(path.join(name, '.gitignore'), fs.readFileSync(path.join(assets, '.gitignore')))
+fs.writeFileSync(path.join(name, '.gitignore'), fs.readFileSync(path.join(assets, 'gitignore')))
 fs.writeFileSync(path.join(name, 'LICENSE'), fs.readFileSync(path.join(assets, 'LICENSE')))
 fs.writeFileSync(path.join(name, 'README.md'), fs.readFileSync(path.join(assets, 'README.md')))
 
