@@ -2,7 +2,7 @@
 
 var program = require('commander')
   .version(require('../package.json').version)
-  .usage('<name>')
+  .usage('<name> [repository]')
   .parse(process.argv)
 
 var path = require('path')
@@ -10,14 +10,31 @@ var fs = require('fs')
 
 var name = program.args[0]
 if (!name) throw new Error('no name defined')
+var repository = program.args[1] || 'jonathanong'
+if (!~repository.indexOf('/')) repository += '/' + name
 
 fs.mkdirSync(name)
 
 var assets = path.join(__dirname, '..', 'assets')
-fs.writeFileSync(path.join(name, '.gitignore'), fs.readFileSync(path.join(assets, 'gitignore')))
-fs.writeFileSync(path.join(name, 'LICENSE'), fs.readFileSync(path.join(assets, 'LICENSE')))
-fs.writeFileSync(path.join(name, 'README.md'), fs.readFileSync(path.join(assets, 'README.md')))
 
+// package.json
 var package = require('../assets/package.json')
 package.name = name
+package.repository = repository
 fs.writeFileSync(path.join(name, 'package.json'), JSON.stringify(package, null, 2))
+
+// dotfiles which have no variables
+fs.writeFileSync(path.join(name, '.gitignore'), fs.readFileSync(path.join(assets, 'gitignore')))
+fs.writeFileSync(path.join(name, '.travis.yml'), fs.readFileSync(path.join(assets, 'travis.yml')))
+
+var license = fs.readFileSync(path.join(assets, 'LICENSE'), 'utf8')
+var readme = fs.readFileSync(path.join(assets, 'README.md'), 'utf8')
+fs.writeFileSync(path.join(name, 'LICENSE'), replace(license))
+fs.writeFileSync(path.join(name, 'README.md'), replace(readme))
+
+function replace(string) {
+  return string
+    .replace(/\{\{name\}\}/g, name)
+    .replace(/\{\{repository\}\}/g, repository)
+    .replace(/\{\{year\}\}/g, new Date().getFullYear())
+}

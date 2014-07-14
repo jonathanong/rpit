@@ -4,3 +4,4 @@
 *.gz
 
 node_modules
+coverage
