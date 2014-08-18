@@ -21,7 +21,7 @@
 [david-image]: http://img.shields.io/david/{{repository}}.svg?style=flat-square
 [david-url]: https://david-dm.org/{{repository}}
 [license-image]: http://img.shields.io/npm/l/{{name}}.svg?style=flat-square
-[license-url]: LICENSE.md
+[license-url]: LICENSE
 [downloads-image]: http://img.shields.io/npm/dm/{{name}}.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/{{name}}
 [gittip-image]: https://img.shields.io/gittip/jonathanong.svg?style=flat-square
