@@ -12,17 +12,17 @@
 
 [npm-image]: https://img.shields.io/npm/v/{{name}}.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/{{name}}
-[github-tag]: http://img.shields.io/github/tag/{{repository}}.svg?style=flat-square
-[github-url]: https://github.com/{{repository}}/tags
-[travis-image]: https://img.shields.io/travis/{{repository}}.svg?style=flat-square
-[travis-url]: https://travis-ci.org/{{repository}}
-[coveralls-image]: https://img.shields.io/coveralls/{{repository}}.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/{{repository}}?branch=master
-[david-image]: http://img.shields.io/david/{{repository}}.svg?style=flat-square
-[david-url]: https://david-dm.org/{{repository}}
+[github-tag]: http://img.shields.io/github/tag/jonathanong/rpit.svg?style=flat-square
+[github-url]: https://github.com/jonathanong/rpit/tags
+[travis-image]: https://img.shields.io/travis/jonathanong/rpit.svg?style=flat-square
+[travis-url]: https://travis-ci.org/jonathanong/rpit
+[coveralls-image]: https://img.shields.io/coveralls/jonathanong/rpit.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/jonathanong/rpit
+[david-image]: http://img.shields.io/david/jonathanong/rpit.svg?style=flat-square
+[david-url]: https://david-dm.org/jonathanong/rpit
 [license-image]: http://img.shields.io/npm/l/{{name}}.svg?style=flat-square
 [license-url]: LICENSE
 [downloads-image]: http://img.shields.io/npm/dm/{{name}}.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/{{name}}
-[gittip-image]: https://img.shields.io/gittip/jonathanong.svg?style=flat-square
-[gittip-url]: https://www.gittip.com/jonathanong/
+[gittip-image]: https://img.shields.io/gratipay/jonathanong.svg?style=flat-square
+[gittip-url]: https://gratipay.com/jonathanong/
