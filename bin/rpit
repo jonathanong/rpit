@@ -1,17 +1,22 @@
 #!/usr/bin/env node
 
+var assert = require('assert');
+
 var program = require('commander')
   .version(require('../package.json').version)
-  .usage('<name> [repository]')
+  .usage('<name>')
+  .option('-o, --org <name>', 'Organization Name')
+  .option('-n, --npm <name>', 'npm package name')
   .parse(process.argv)
 
 var path = require('path')
 var fs = require('fs')
 
 var name = program.args[0]
-if (!name) throw new Error('no name defined')
-var repository = program.args[1] || 'jonathanong'
-if (!~repository.indexOf('/')) repository += '/' + name
+assert(name, 'no name defined')
+var owner = program.org || 'jonathanong'
+var repository = owner + '/' + name
+var npm = program.npm || name
 
 fs.mkdirSync(name)
 
@@ -19,7 +24,7 @@ var assets = path.join(__dirname, '..', 'assets')
 
 // package.json
 var package = require('../assets/package.json')
-package.name = name
+package.name = npm
 package.repository = repository
 fs.writeFileSync(path.join(name, 'package.json'), JSON.stringify(package, null, 2))
 
