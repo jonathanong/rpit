@@ -9,8 +9,8 @@
 
   },
   "devDependencies": {
-    "istanbul": "0",
-    "mocha": "1"
+    "mocha": "1",
+    "istanbul": "0"
   },
   "scripts": {
     "test": "mocha --reporter spec",
