@@ -28,7 +28,7 @@ fs.writeFileSync(path.join(name, '.gitignore'), fs.readFileSync(path.join(assets
 
 // travis
 var travis = fs.readFileSync(path.join(assets, 'travis.yml'), 'utf8')
-if (program.harmony) travis = travis.replace('"0.10"\n', '')
+if (program.harmony) travis = travis.replace('- "0.10"\n', '')
 fs.writeFileSync(path.join(name, '.travis.yml'), travis)
 
 // package.json
