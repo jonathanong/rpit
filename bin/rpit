@@ -7,7 +7,6 @@ var program = require('commander')
   .usage('<name>')
   .option('-o, --org <name>', 'github owner/organization name')
   .option('-n, --npm <name>', 'npm package name')
-  .option('--harmony', 'requires node --harmony')
   .parse(process.argv)
 
 var path = require('path')
@@ -28,22 +27,12 @@ fs.writeFileSync(path.join(name, '.gitignore'), fs.readFileSync(path.join(assets
 
 // travis
 var travis = fs.readFileSync(path.join(assets, 'travis.yml'), 'utf8')
-if (program.harmony) travis = travis.replace('- "0.10"\n', '')
 fs.writeFileSync(path.join(name, '.travis.yml'), travis)
 
 // package.json
 var package = require('../assets/package.json')
 package.name = npm
 package.repository = repository
-if (program.harmony) {
-  package.devDependencies['istanbul-harmony'] = package.devDependencies.istanbul
-  delete package.devDependencies.istanbul
-  package.scripts = {
-    "test": "mocha --harmony-generators --reporter spec",
-    "test-cov": "node --harmony-generators node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter dot",
-    "test-travis": "node --harmony-generators node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --reporter dot"
-  }
-}
 fs.writeFileSync(path.join(name, 'package.json'), JSON.stringify(package, null, 2))
 
 var license = fs.readFileSync(path.join(assets, 'LICENSE'), 'utf8')
