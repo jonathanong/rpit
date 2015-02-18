@@ -9,18 +9,20 @@
 
   },
   "devDependencies": {
+    "istanbul": "0",
     "mocha": "2",
-    "istanbul": "0"
+    "standardberry": "1"
   },
   "scripts": {
+    "lint": "standardberry index.js",
     "test": "mocha",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
+    "test-travis": "npm run lint && istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
   },
   "keywords": [
 
   ],
   "files": [
-    
+
   ]
 }
