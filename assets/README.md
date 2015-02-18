@@ -1,7 +1,6 @@
 
 # {{name}}
 
-[![Gitter chat][gitter-image]][gitter-url]
 [![NPM version][npm-image]][npm-url]
 [![Latest tag][github-tag]][github-url]
 [![Build status][travis-image]][travis-url]
@@ -11,8 +10,6 @@
 [![Downloads][downloads-image]][downloads-url]
 [![Gittip][gittip-image]][gittip-url]
 
-[gitter-image]: https://badges.gitter.im/{{repository}}.png
-[gitter-url]: https://gitter.im/{{repository}}
 [npm-image]: https://img.shields.io/npm/v/{{name}}.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/{{name}}
 [github-tag]: http://img.shields.io/github/tag/{{repository}}.svg?style=flat-square
