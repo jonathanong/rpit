@@ -10,8 +10,8 @@
 [![Downloads][downloads-image]][downloads-url]
 [![Gittip][gittip-image]][gittip-url]
 
-[npm-image]: https://img.shields.io/npm/v/{{name}}.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/{{name}}
+[npm-image]: https://img.shields.io/npm/v/{{npm}}.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/{{npm}}
 [github-tag]: http://img.shields.io/github/tag/{{repository}}.svg?style=flat-square
 [github-url]: https://github.com/{{repository}}/tags
 [travis-image]: https://img.shields.io/travis/{{repository}}.svg?style=flat-square
@@ -20,9 +20,9 @@
 [coveralls-url]: https://coveralls.io/r/{{repository}}
 [david-image]: http://img.shields.io/david/{{repository}}.svg?style=flat-square
 [david-url]: https://david-dm.org/{{repository}}
-[license-image]: http://img.shields.io/npm/l/{{name}}.svg?style=flat-square
+[license-image]: http://img.shields.io/npm/l/{{npm}}.svg?style=flat-square
 [license-url]: LICENSE
-[downloads-image]: http://img.shields.io/npm/dm/{{name}}.svg?style=flat-square
-[downloads-url]: https://npmjs.org/package/{{name}}
+[downloads-image]: http://img.shields.io/npm/dm/{{npm}}.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/{{npm}}
 [gittip-image]: https://img.shields.io/gratipay/jonathanong.svg?style=flat-square
 [gittip-url]: https://gratipay.com/jonathanong/

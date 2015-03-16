@@ -43,6 +43,7 @@ fs.writeFileSync(path.join(name, 'README.md'), replace(readme))
 function replace(string) {
   return string
     .replace(/\{\{name\}\}/g, name)
+    .replace(/\{\{npm\}\}/g, npm)
     .replace(/\{\{repository\}\}/g, repository)
     .replace(/\{\{year\}\}/g, new Date().getFullYear())
 }
