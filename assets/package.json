@@ -9,15 +9,15 @@
 
   },
   "devDependencies": {
-    "babel-istanbul": "0",
+    "istanbul": "0",
     "mocha": "2",
-    "standardberry": "*"
+    "standard": "5"
   },
   "scripts": {
-    "lint": "standardberry index.js",
+    "lint": "standard index.js",
     "test": "mocha",
-    "test-cov": "babel-istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
-    "test-ci": "npm run lint && babel-istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
+    "test-ci": "npm run lint && istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
   },
   "keywords": [
 
