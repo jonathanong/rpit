@@ -4,5 +4,9 @@
 *.map
 *.gz
 
+# modules
 node_modules
+
+# coverage
+.nyc_output
 coverage

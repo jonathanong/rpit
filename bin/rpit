@@ -25,6 +25,9 @@ var assets = path.join(__dirname, '..', 'assets')
 // gitignore
 fs.writeFileSync(path.join(name, '.gitignore'), fs.readFileSync(path.join(assets, 'gitignore')))
 
+// eslintrc
+fs.writeFileSync(path.join(name, '.eslintrc'), fs.readFileSync(path.join(assets, 'eslintrc')))
+
 // travis
 var travis = fs.readFileSync(path.join(assets, 'travis.yml'), 'utf8')
 fs.writeFileSync(path.join(name, '.travis.yml'), travis)

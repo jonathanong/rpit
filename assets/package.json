@@ -9,15 +9,18 @@
 
   },
   "devDependencies": {
-    "istanbul": "0",
-    "mocha": "2",
-    "standard": "5"
+    "babel-eslint": "4",
+    "eslint": "1",
+    "eslint-config-standard": "4",
+    "eslint-plugin-standard": "1",
+    "nyc": "5",
+    "mocha": "2"
   },
   "scripts": {
-    "lint": "standard index.js",
+    "lint": "eslint lib test",
     "test": "mocha",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
-    "test-ci": "npm run lint && istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
+    "test-ci": "nyc node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
   },
   "keywords": [
 
