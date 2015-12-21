@@ -5,6 +5,6 @@ language: node_js
 sudo: false
 script:
   - npm run lint
-  - npm run test-ci
+  - npm run test-cov
 after_script:
   - npm install coveralls@2 && cat ./coverage/lcov.info | coveralls
