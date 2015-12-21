@@ -2,7 +2,6 @@
 # {{name}}
 
 [![NPM version][npm-image]][npm-url]
-[![Latest tag][github-tag]][github-url]
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 [![Dependency Status][david-image]][david-url]
@@ -11,8 +10,6 @@
 
 [npm-image]: https://img.shields.io/npm/v/{{npm}}.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/{{npm}}
-[github-tag]: http://img.shields.io/github/tag/{{repository}}.svg?style=flat-square
-[github-url]: https://github.com/{{repository}}/tags
 [travis-image]: https://img.shields.io/travis/{{repository}}.svg?style=flat-square
 [travis-url]: https://travis-ci.org/{{repository}}
 [coveralls-image]: https://img.shields.io/coveralls/{{repository}}.svg?style=flat-square

@@ -19,7 +19,7 @@
   "scripts": {
     "lint": "eslint lib test",
     "test": "mocha",
-    "test-cov": "nyc node_modules/mocha/bin/_mocha"
+    "test-cov": "nyc node_modules/mocha/bin/_mocha && nyc report --reporter=lcov"
   },
   "keywords": [
 
