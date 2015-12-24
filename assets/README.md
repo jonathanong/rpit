@@ -3,7 +3,7 @@
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
+[![Test coverage][codecov-image]][codecov-url]
 [![Dependency Status][david-image]][david-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
@@ -12,8 +12,8 @@
 [npm-url]: https://npmjs.org/package/{{npm}}
 [travis-image]: https://img.shields.io/travis/{{repository}}.svg?style=flat-square
 [travis-url]: https://travis-ci.org/{{repository}}
-[coveralls-image]: https://img.shields.io/coveralls/{{repository}}.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/{{repository}}
+[codecov-image]: https://img.shields.io/codecov/c/github/{{repository}}/master.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/{{repository}}
 [david-image]: http://img.shields.io/david/{{repository}}.svg?style=flat-square
 [david-url]: https://david-dm.org/{{repository}}
 [license-image]: http://img.shields.io/npm/l/{{npm}}.svg?style=flat-square

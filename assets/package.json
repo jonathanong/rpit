@@ -10,21 +10,29 @@
   },
   "devDependencies": {
     "babel-eslint": "4",
+    "codecov": "1",
     "eslint": "1",
     "eslint-config-standard": "4",
     "eslint-plugin-standard": "1",
+    "ghooks": "1",
     "nyc": "5",
     "mocha": "2"
   },
   "scripts": {
-    "lint": "eslint lib test",
+    "lint": "eslint --cache lib test",
     "test": "mocha",
     "test-cov": "nyc node_modules/mocha/bin/_mocha && nyc report --reporter=lcov"
+  },
+  "config": {
+    "ghooks": {
+      "pre-push": "npm run lint"
+    }
   },
   "keywords": [
 
   ],
   "files": [
-
-  ]
+    "lib"
+  ],
+  "main": "lib"
 }

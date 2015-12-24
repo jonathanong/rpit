@@ -9,6 +9,7 @@ var program = require('commander')
   .option('-n, --npm <name>', 'npm package name')
   .parse(process.argv)
 
+var mkdirp = require('mkdirp')
 var path = require('path')
 var fs = require('fs')
 
@@ -42,6 +43,12 @@ var license = fs.readFileSync(path.join(assets, 'LICENSE'), 'utf8')
 var readme = fs.readFileSync(path.join(assets, 'README.md'), 'utf8')
 fs.writeFileSync(path.join(name, 'LICENSE'), replace(license))
 fs.writeFileSync(path.join(name, 'README.md'), replace(readme))
+
+// folders
+mkdirp.sync(path.join(name, 'lib'))
+mkdirp.sync(path.join(name, 'test'))
+fs.writeFileSync(path.join(name, 'lib', 'index.js'), '')
+fs.writeFileSync(path.join(name, 'test', 'index.js'), '')
 
 function replace(string) {
   return string

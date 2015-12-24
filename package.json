@@ -11,7 +11,8 @@
   "license": "MIT",
   "repository": "jonathanong/rpit",
   "dependencies": {
-    "commander": "*"
+    "commander": "*",
+    "mkdirp": "^0.5.1"
   },
   "bin": "bin/rpit"
 }
