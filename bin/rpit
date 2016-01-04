@@ -50,6 +50,16 @@ mkdirp.sync(path.join(name, 'test'))
 fs.writeFileSync(path.join(name, 'lib', 'index.js'), '')
 fs.writeFileSync(path.join(name, 'test', 'index.js'), '')
 
+// eslint file for tests
+fs.writeFileSync(path.join(name, 'test', '.eslintrc'), JSON.stringify({
+  env: {
+    mocha: true
+  },
+  rules: {
+    "max-nested-callbacks": 0
+  }
+}, null, 2))
+
 function replace(string) {
   return string
     .replace(/\{\{name\}\}/g, name)
