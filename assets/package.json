@@ -20,9 +20,9 @@
     "mocha": "2"
   },
   "scripts": {
-    "lint": "eslint --cache lib test",
+    "lint": "eslint --cache --cache-location node_modules/.cache/eslint lib test",
     "test": "mocha --bail",
-    "test-cov": "nyc node_modules/mocha/bin/_mocha && nyc report --reporter=lcov"
+    "test-cov": "nyc --cache node_modules/mocha/bin/_mocha && nyc report --reporter=lcov"
   },
   "config": {
     "ghooks": {
