@@ -10,7 +10,7 @@
 
 [npm-image]: https://img.shields.io/npm/v/{{npm}}.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/{{npm}}
-[travis-image]: https://img.shields.io/travis/{{repository}}.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/{{repository}}/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/{{repository}}
 [codecov-image]: https://img.shields.io/codecov/c/github/{{repository}}/master.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/{{repository}}
